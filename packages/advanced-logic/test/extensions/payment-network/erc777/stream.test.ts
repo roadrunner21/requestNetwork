@@ -1,7 +1,7 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
 import { deepCopy } from '@requestnetwork/utils';
 
-import Erc777StreamPaymentNetwork from '../../../../src/extensions/payment-network/erc777/stream';
+import { Erc777StreamPaymentNetwork } from '../../../../src/extensions/payment-network/erc777/stream';
 
 import * as DataERC777StreamAddData from '../../../utils/payment-network/erc777/stream-add-data-generator';
 import * as DataERC777StreamCreate from '../../../utils/payment-network/erc777/stream-create-data-generator';

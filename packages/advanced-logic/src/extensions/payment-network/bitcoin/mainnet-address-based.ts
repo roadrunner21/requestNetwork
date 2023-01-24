@@ -1,5 +1,5 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import AddressBasedPaymentNetwork from '../address-based';
+import { AddressBasedPaymentNetwork } from '../address-based';
 
 const CURRENT_VERSION = '0.1.0';
 const BITCOIN_NETWORK = 'mainnet';
@@ -10,7 +10,7 @@ const BITCOIN_NETWORK = 'mainnet';
  * Every bitcoin transaction that reaches these addresses will be interpreted as payment or refund.
  * Important: the addresses must be exclusive to the request
  */
-export default class BitcoinAddressBasedPaymentNetwork extends AddressBasedPaymentNetwork {
+export class BitcoinAddressBasedPaymentNetwork extends AddressBasedPaymentNetwork {
   public constructor(
     extensionId: ExtensionTypes.PAYMENT_NETWORK_ID = ExtensionTypes.PAYMENT_NETWORK_ID
       .BITCOIN_ADDRESS_BASED,

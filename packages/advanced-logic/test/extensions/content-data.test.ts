@@ -1,7 +1,7 @@
 import { ExtensionTypes } from '@requestnetwork/types';
 import { deepCopy } from '@requestnetwork/utils';
 
-import ContentData from '../../src/extensions/content-data';
+import { ContentDataExtension as ContentData } from '../../src/extensions/content-data';
 
 import * as TestData from '../utils/test-data-generator';
 

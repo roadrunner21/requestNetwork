@@ -1,5 +1,5 @@
 import { ExtensionTypes } from '@requestnetwork/types';
-import AddressBasedPaymentNetwork from './address-based';
+import { AddressBasedPaymentNetwork } from './address-based';
 
 // Regex for "at least 16 hexadecimal numbers". Used to validate the salt
 const eightHexRegex = /[0-9a-f]{16,}/;
@@ -8,7 +8,7 @@ const eightHexRegex = /[0-9a-f]{16,}/;
  * Core of the reference based payment networks
  * This module is called by the reference based payment networks to avoid code redundancy
  */
-export default abstract class ReferenceBasedPaymentNetwork<
+export abstract class ReferenceBasedPaymentNetwork<
   TCreationParameters extends ExtensionTypes.PnReferenceBased.ICreationParameters = ExtensionTypes.PnReferenceBased.ICreationParameters,
 > extends AddressBasedPaymentNetwork<TCreationParameters> {
   /**

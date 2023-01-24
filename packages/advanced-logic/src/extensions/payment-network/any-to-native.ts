@@ -2,7 +2,7 @@ import { FeeReferenceBasedPaymentNetwork } from './fee-reference-based';
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
 import { InvalidPaymentAddressError, UnsupportedNetworkError } from './address-based';
 
-export default abstract class AnyToNativeTokenPaymentNetwork extends FeeReferenceBasedPaymentNetwork {
+export abstract class AnyToNativeTokenPaymentNetwork extends FeeReferenceBasedPaymentNetwork {
   protected constructor(
     extensionId: ExtensionTypes.PAYMENT_NETWORK_ID,
     currentVersion: string,

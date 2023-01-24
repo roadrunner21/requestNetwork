@@ -1,9 +1,9 @@
-import NearNativePaymentNetwork from './near-native';
+import { NearNativePaymentNetwork } from './near-native';
 
 /**
  * Implementation of the payment network to pay in Near on testnet based on input data.
  */
-export default class NearTestnetNativeNativePaymentNetwork extends NearNativePaymentNetwork {
+export class NearTestnetNativeNativePaymentNetwork extends NearNativePaymentNetwork {
   public constructor() {
     // testnet PN version is the same as mainnet, can be overridden here if needed
     super(['aurora-testnet', 'near-testnet']);

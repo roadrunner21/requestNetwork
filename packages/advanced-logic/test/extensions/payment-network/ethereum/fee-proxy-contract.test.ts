@@ -1,6 +1,6 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
 
-import EthereumFeeProxyContract from '../../../../src/extensions/payment-network/ethereum/fee-proxy-contract';
+import { EthereumFeeProxyPaymentNetwork as EthereumFeeProxyContract } from '../../../../src/extensions/payment-network/ethereum/fee-proxy-contract';
 
 import * as DataEthFeeAddData from '../../../utils/payment-network/ethereum/fee-proxy-contract-add-data-generator';
 import * as DataEthFeeCreate from '../../../utils/payment-network/ethereum/fee-proxy-contract-create-data-generator';

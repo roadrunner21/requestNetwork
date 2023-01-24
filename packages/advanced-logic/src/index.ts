@@ -1,1 +1,1 @@
-export { default as AdvancedLogic } from './advanced-logic';
+export { AdvancedLogic } from './advanced-logic';

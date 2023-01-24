@@ -1,6 +1,6 @@
 import { ExtensionTypes, RequestLogicTypes, IdentityTypes } from '@requestnetwork/types';
 
-import Erc20ProxyContract from '../../../../src/extensions/payment-network/erc20/proxy-contract';
+import { Erc20ProxyPaymentNetwork as Erc20ProxyContract } from '../../../../src/extensions/payment-network/erc20/proxy-contract';
 
 import * as DataERC20AddPaymentAddress from '../../../utils/payment-network/erc20/proxy-contract-add-payment-address-data-generator';
 import * as DataERC20Create from '../../../utils/payment-network/erc20/proxy-contract-create-data-generator';

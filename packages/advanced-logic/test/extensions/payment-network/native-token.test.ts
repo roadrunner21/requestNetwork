@@ -1,5 +1,5 @@
-import NativeTokenPaymentNetwork from '../../../src/extensions/payment-network/native-token';
-import NearNativePaymentNetwork from '../../../src/extensions/payment-network/near/near-native';
+import { NativeTokenPaymentNetwork } from '../../../src/extensions/payment-network/native-token';
+import { NearNativePaymentNetwork } from '../../../src/extensions/payment-network/near/near-native';
 import {
   arbitrarySalt,
   requestStateNoExtensions,
@@ -12,7 +12,7 @@ import {
 import { AdvancedLogic } from '../../../src';
 import { arbitraryTimestamp, payeeRaw } from '../../utils/test-data-generator';
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import NearTestnetNativeNativePaymentNetwork from '../../../src/extensions/payment-network/near/near-testnet-native';
+import { NearTestnetNativeNativePaymentNetwork } from '../../../src/extensions/payment-network/near/near-testnet-native';
 
 const salt = arbitrarySalt;
 

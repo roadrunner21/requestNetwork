@@ -1,4 +1,4 @@
-import TestnetBitcoinAddressBasedPN from '../../../../src/extensions/payment-network/bitcoin/testnet-address-based';
+import { BitcoinTestnetAddressBasedPaymentNetwork as TestnetBitcoinAddressBasedPN } from '../../../../src/extensions/payment-network/bitcoin/testnet-address-based';
 import { deepCopy } from '@requestnetwork/utils';
 import * as DataBTCAddPaymentAddress from '../../../utils/payment-network/bitcoin/testnet-generator-data-add-payment-address';
 import * as DataBTCCreate from '../../../utils/payment-network/bitcoin/testnet-generator-data-create';

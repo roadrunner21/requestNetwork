@@ -7,7 +7,7 @@ const CURRENT_VERSION = '0.1.0';
 /**
  * Core of the declarative payment network
  */
-export default class DeclarativePaymentNetwork<
+export class DeclarativePaymentNetwork<
   TCreationParameters extends ExtensionTypes.PnAnyDeclarative.ICreationParameters = ExtensionTypes.PnAnyDeclarative.ICreationParameters,
 > extends AbstractExtension<TCreationParameters> {
   public constructor(

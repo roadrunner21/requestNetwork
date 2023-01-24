@@ -1,12 +1,12 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
 import { InvalidPaymentAddressError, UnsupportedNetworkError } from './address-based';
 
-import ReferenceBasedPaymentNetwork from './reference-based';
+import { ReferenceBasedPaymentNetwork } from './reference-based';
 
 /**
  * Implementation of the payment network to pay in ETH based on input data.
  */
-export default abstract class NativeTokenPaymentNetwork extends ReferenceBasedPaymentNetwork {
+export abstract class NativeTokenPaymentNetwork extends ReferenceBasedPaymentNetwork {
   public constructor(
     extensionId: ExtensionTypes.PAYMENT_NETWORK_ID,
     currentVersion: string,

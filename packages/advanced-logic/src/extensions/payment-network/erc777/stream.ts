@@ -1,12 +1,12 @@
 import { ExtensionTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
-import ReferenceBasedPaymentNetwork from '../reference-based';
+import { ReferenceBasedPaymentNetwork } from '../reference-based';
 import { isValidAmount } from '@requestnetwork/utils';
 const CURRENT_VERSION = '0.1.0';
 
 /**
  * Implementation of the payment network to pay in ERC777, including third-party fees payment, based on a reference provided to a proxy contract.
  */
-export default class Erc777StreamPaymentNetwork<
+export class Erc777StreamPaymentNetwork<
   TCreationParameters extends ExtensionTypes.PnStreamReferenceBased.ICreationParameters = ExtensionTypes.PnStreamReferenceBased.ICreationParameters,
 > extends ReferenceBasedPaymentNetwork<TCreationParameters> {
   public constructor() {

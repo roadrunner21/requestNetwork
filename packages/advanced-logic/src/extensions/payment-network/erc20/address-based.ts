@@ -1,5 +1,5 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import AddressBasedPaymentNetwork from '../address-based';
+import { AddressBasedPaymentNetwork } from '../address-based';
 
 const CURRENT_VERSION = '0.1.0';
 
@@ -9,7 +9,7 @@ const CURRENT_VERSION = '0.1.0';
  * Every ERC20 ethereum transaction, using the request currency ERC20, that reaches these addresses will be interpreted as payment or refund.
  * Important: the addresses must be exclusive to the request
  */
-export default class Erc20AddressBasedPaymentNetwork extends AddressBasedPaymentNetwork {
+export class Erc20AddressBasedPaymentNetwork extends AddressBasedPaymentNetwork {
   public constructor() {
     super(
       ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_ADDRESS_BASED,

@@ -6,30 +6,30 @@ import {
 } from '@requestnetwork/types';
 import { CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
 
-import ContentData from './extensions/content-data';
-import AddressBasedBtc from './extensions/payment-network/bitcoin/mainnet-address-based';
-import AddressBasedTestnetBtc from './extensions/payment-network/bitcoin/testnet-address-based';
-import Declarative from './extensions/payment-network/declarative';
-import AddressBasedErc20 from './extensions/payment-network/erc20/address-based';
-import FeeProxyContractErc20 from './extensions/payment-network/erc20/fee-proxy-contract';
-import ProxyContractErc20 from './extensions/payment-network/erc20/proxy-contract';
-import Erc777Stream from './extensions/payment-network/erc777/stream';
-import FeeProxyContractEth from './extensions/payment-network/ethereum/fee-proxy-contract';
-import EthereumInputData from './extensions/payment-network/ethereum/input-data';
-import NearNative from './extensions/payment-network/near/near-native';
-import NearTestnetNative from './extensions/payment-network/near/near-testnet-native';
-import AnyToErc20Proxy from './extensions/payment-network/any-to-erc20-proxy';
-import AnyToEthProxy from './extensions/payment-network/any-to-eth-proxy';
-import AnyToNear from './extensions/payment-network/near/any-to-near';
-import AnyToNearTestnet from './extensions/payment-network/near/any-to-near-testnet';
-import NativeToken from './extensions/payment-network/native-token';
-import AnyToNative from './extensions/payment-network/any-to-native';
+import { ContentDataExtension as ContentData } from './extensions/content-data';
+import { BitcoinAddressBasedPaymentNetwork as AddressBasedBtc } from './extensions/payment-network/bitcoin/mainnet-address-based';
+import { BitcoinTestnetAddressBasedPaymentNetwork as AddressBasedTestnetBtc } from './extensions/payment-network/bitcoin/testnet-address-based';
+import { DeclarativePaymentNetwork as Declarative } from './extensions/payment-network/declarative';
+import { Erc20AddressBasedPaymentNetwork as AddressBasedErc20 } from './extensions/payment-network/erc20/address-based';
+import { Erc20FeeProxyPaymentNetwork as FeeProxyContractErc20 } from './extensions/payment-network/erc20/fee-proxy-contract';
+import { Erc20ProxyPaymentNetwork as ProxyContractErc20 } from './extensions/payment-network/erc20/proxy-contract';
+import { Erc777StreamPaymentNetwork as Erc777Stream } from './extensions/payment-network/erc777/stream';
+import { EthereumFeeProxyPaymentNetwork as FeeProxyContractEth } from './extensions/payment-network/ethereum/fee-proxy-contract';
+import { EthInputPaymentNetwork as EthereumInputData } from './extensions/payment-network/ethereum/input-data';
+import { NearNativePaymentNetwork as NearNative } from './extensions/payment-network/near/near-native';
+import { NearTestnetNativeNativePaymentNetwork as NearTestnetNative } from './extensions/payment-network/near/near-testnet-native';
+import { AnyToErc20ProxyPaymentNetwork as AnyToErc20Proxy } from './extensions/payment-network/any-to-erc20-proxy';
+import { AnyToEthProxyPaymentNetwork as AnyToEthProxy } from './extensions/payment-network/any-to-eth-proxy';
+import { AnyToNearPaymentNetwork as AnyToNear } from './extensions/payment-network/near/any-to-near';
+import { AnyToNearTestnetPaymentNetwork as AnyToNearTestnet } from './extensions/payment-network/near/any-to-near-testnet';
+import { NativeTokenPaymentNetwork as NativeToken } from './extensions/payment-network/native-token';
+import { AnyToNativeTokenPaymentNetwork as AnyToNative } from './extensions/payment-network/any-to-native';
 
 /**
  * Module to manage Advanced logic extensions
  * Package to route the format and parsing of extensions following their id
  */
-export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic {
+export class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic {
   /** Give access to the functions specific of the extensions supported */
   public extensions: {
     addressBasedBtc: AddressBasedBtc;

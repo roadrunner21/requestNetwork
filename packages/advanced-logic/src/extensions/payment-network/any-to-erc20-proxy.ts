@@ -4,11 +4,11 @@ import {
   UnsupportedCurrencyError,
 } from '@requestnetwork/currency';
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import Erc20FeeProxyPaymentNetwork from './erc20/fee-proxy-contract';
+import { Erc20FeeProxyPaymentNetwork } from './erc20/fee-proxy-contract';
 
 const CURRENT_VERSION = '0.1.0';
 
-export default class AnyToErc20ProxyPaymentNetwork extends Erc20FeeProxyPaymentNetwork {
+export class AnyToErc20ProxyPaymentNetwork extends Erc20FeeProxyPaymentNetwork {
   public constructor(
     private currencyManager: ICurrencyManager,
     extensionId: ExtensionTypes.PAYMENT_NETWORK_ID = ExtensionTypes.PAYMENT_NETWORK_ID

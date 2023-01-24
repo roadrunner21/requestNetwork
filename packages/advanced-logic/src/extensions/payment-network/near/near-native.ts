@@ -1,12 +1,12 @@
 import { ExtensionTypes } from '@requestnetwork/types';
-import NativeTokenPaymentNetwork from '../native-token';
+import { NativeTokenPaymentNetwork } from '../native-token';
 
 const CURRENT_VERSION = '0.2.0';
 
 /**
  * Implementation of the payment network to pay in Near based on input data.
  */
-export default class NearNativePaymentNetwork extends NativeTokenPaymentNetwork {
+export class NearNativePaymentNetwork extends NativeTokenPaymentNetwork {
   public constructor(
     supportedNetworks: string[] = [
       'aurora',

@@ -1,7 +1,7 @@
 import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
 import { deepCopy } from '@requestnetwork/utils';
 
-import EthereumInputDataPaymentNetwork from '../../../../src/extensions/payment-network/ethereum/input-data';
+import { EthInputPaymentNetwork as EthereumInputDataPaymentNetwork } from '../../../../src/extensions/payment-network/ethereum/input-data';
 
 import * as DataEthAddPaymentAddress from '../../../utils/payment-network/ethereum/add-payment-address-data-generator';
 import * as DataEthCreate from '../../../utils/payment-network/ethereum/create-data-generator';

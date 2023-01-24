@@ -1,13 +1,13 @@
 import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
 import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
 import { areEqualIdentities, deepCopy } from '@requestnetwork/utils';
-import DeclarativePaymentNetwork from './declarative';
+import { DeclarativePaymentNetwork } from './declarative';
 
 /**
  * Core of the address based payment networks
  * This module is called by the address based payment networks to avoid code redundancy
  */
-export default abstract class AddressBasedPaymentNetwork<
+export abstract class AddressBasedPaymentNetwork<
   TCreationParameters extends ExtensionTypes.PnAddressBased.ICreationParameters = ExtensionTypes.PnAddressBased.ICreationParameters,
 > extends DeclarativePaymentNetwork<TCreationParameters> {
   protected constructor(

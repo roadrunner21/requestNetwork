@@ -1,4 +1,4 @@
-import PnAnyDeclarative from '../../../src/extensions/payment-network/declarative';
+import { DeclarativePaymentNetwork as PnAnyDeclarative } from '../../../src/extensions/payment-network/declarative';
 
 import { deepCopy } from '@requestnetwork/utils';
 import { ExtensionTypes } from '@requestnetwork/types';

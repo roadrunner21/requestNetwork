@@ -1,7 +1,7 @@
 import { ICurrencyManager } from '@requestnetwork/currency';
-import AnyToNearPaymentNetwork from './any-to-near';
+import { AnyToNearPaymentNetwork } from './any-to-near';
 
-export default class AnyToNearTestnetPaymentNetwork extends AnyToNearPaymentNetwork {
+export class AnyToNearTestnetPaymentNetwork extends AnyToNearPaymentNetwork {
   public constructor(currencyManager: ICurrencyManager) {
     // testnet PN version is the same as mainnet, can be overridden here if needed
     super(currencyManager, ['aurora-testnet', 'near-testnet']);

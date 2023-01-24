@@ -1,4 +1,4 @@
-import MainnetBitcoinAddressBasedPN from '../../../../src/extensions/payment-network/bitcoin/mainnet-address-based';
+import { BitcoinAddressBasedPaymentNetwork as MainnetBitcoinAddressBasedPN } from '../../../../src/extensions/payment-network/bitcoin/mainnet-address-based';
 import { deepCopy } from '@requestnetwork/utils';
 import * as DataBTCAddPaymentAddress from '../../../utils/payment-network/bitcoin/generator-data-add-payment-address';
 import * as DataBTCCreate from '../../../utils/payment-network/bitcoin/generator-data-create';
